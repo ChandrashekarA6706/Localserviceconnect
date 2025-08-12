@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Local Service Connect - Carpentry Search</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <script src="Library/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        #title {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 15px;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            flex-wrap: wrap;
+            animation: fadeIn 1s ease-in-out;
+            background-image: url(https://img.freepik.com/free-photo/vintage-grunge-blue-concrete-texture-studio-wall-background-with-vignette_1258-28374.jpg);
+            animation: slideIn 1s ease-in-out;
+        }
+
+        #title-img {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            border: 1px solid white;
+            animation: slideIn 1.5s ease-in-out;
+            margin-right: 15px;
+        }
+
+        #title h1 {
+            flex-grow: 1; 
+            text-align: center;
+        }
+        
+        .navbar {
+            border-radius: 5px;
+            margin-top: 5px;
+            animation: slideIn 1.5s ease-in-out;
+            position: relative;
+        }
+
+        footer {
+            background: #1c1c1c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+            margin-top: 40px;
+            border-radius: 10px;
+            padding-bottom: 0px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        #footer a {
+            text-decoration: none;
+            color: dimgray;
+        }
+
+        #footer a:hover {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .search-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .search-section label {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .search-section select {
+            width: 450px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button-container {
+            margin-top: 10px; 
+        }
+
+        .button-container .btn {
+            display: block;
+            margin: 0 auto; 
+        }
+
+        @media (max-width: 768px) {
+            #title {
+                flex-direction: column;
+                text-align: center;
+            }
+            .search-section select {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid mt-3">
+        <div id="title" class="shadow">
+            <div><img style="justify-content: left;" src="images/logo.jpg" alt="Logo" id="title-img" /></div>
+            <h1>LOCAL SERVICE CONNECT</h1>
+        </div>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#title">LCS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="demo.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#footer">About Us</a></li>    
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="search-section">
+            <label for="city-select" style="margin-bottom:40px;">Search for Carpentry services near you</label>
+            <div class="search-container">
+                <form action="carpentry.php" method="GET">
+                    <select id="city-select" name="city" required>
+                        <option value="" disabled selected>Select city</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="mumbai">Mumbai</option>
+                    </select>
+                    <div class="button-container">
+                        <button type="submit" class="btn btn-outline-primary">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <p>Copyrights © 2025 Local Service Connect. All rights reserved.</p>
+            <p>📞<a href="tel:+916281175531">+916281175531</a></p>
+        </footer>
+    </div>
+</body>
+</html>
